@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+form {
+  font-family: "Montserrat Alternates", sans-serif;
+}

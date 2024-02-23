@@ -4,6 +4,7 @@ import FormComponent from "../components/userForm/form";
 import axios from "axios";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import LoginStyles from "./login.module.css";
 
 type FormData = {
   userName?: string;
@@ -53,23 +54,28 @@ export default function LoginPage() {
   };
 
   return (
-    <div>
-      <h1>Welcome back to Amiably Login</h1>
-
-      <FormComponent
-        type="login"
-        values={formValues}
-        onChangeHandler={handleLoginChange}
-        onClick={handleLoginClickEvent}
-      />
-      <Link href="/">
-        <button>Home</button>
-      </Link>
-      <Link href="/register">
-        <button>
-          <small>not yet register? register here</small>
-        </button>
-      </Link>
+    <div
+      className={`flex bg-red-100 flex-col items-center md:flex-row w-screen h-screen p-4 gap-4 md:gap-1`}
+    >
+      <figure
+        className={`w-32 h-32 md:w-10/12 md:h-3/4 md:bg-red-200 md:rounded-lg flex flex-col items-center md:p-10 mt-2 md:ml-4 md:shadow-sm`}
+      >
+        <img
+          className={`w-full h-full md:w-full md:h-full`}
+          src="/photos/ice-cream.png"
+          alt="Ice Cream"
+        />
+      </figure>
+      <div
+        className={`w-full flex flex-col items-center justify-normal md:justify-center py-10 gap-0 md:gap-20 px-5`}
+      >
+        <FormComponent
+          type="login"
+          values={formValues}
+          onChangeHandler={handleLoginChange}
+          onClick={handleLoginClickEvent}
+        />
+      </div>
     </div>
   );
 }
