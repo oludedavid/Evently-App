@@ -84,7 +84,7 @@ const RegisterForm = ({
             className="h-8 rounded-md p-2"
             onChange={(e) => changeHandler(e)}
             type="email"
-            placeholder="Max@muller.com"
+            placeholder="max@muller.com"
             id="userEmail"
             name="userEmail"
             value={values.userEmail}
@@ -111,7 +111,7 @@ const RegisterForm = ({
             <img
               width={14}
               height={10}
-              src={`${hidePassword ? "/photos/hide.png" : "/photos/show.png"}`}
+              src={`${hidePassword ? "/icons/hide.png" : "/icons/show.png"}`}
             />
           </button>
         </div>
@@ -125,7 +125,7 @@ const RegisterForm = ({
           className={`w-1/2 text-center flex flex-row justify-center pl-9 `}
           href="/"
         >
-          <img width={20} height={2} src="/photos/back.png" />
+          <img width={20} height={2} src="/icons/back.png" />
         </Link>
       </div>
     </form>
@@ -160,7 +160,7 @@ const LoginForm = ({
           className="h-8 rounded-md p-2"
           onChange={(e) => changeHandler(e)}
           type="email"
-          placeholder="Max@muller.com"
+          placeholder="max@muller.com"
           id="userEmail"
           name="userEmail"
           value={values.userEmail}
@@ -187,7 +187,7 @@ const LoginForm = ({
           <img
             width={10}
             height={10}
-            src={`${hidePassword ? "/photos/hide.png" : "/photos/show.png"}`}
+            src={`${hidePassword ? "/icons/hide.png" : "/icons/show.png"}`}
           />
         </button>
       </div>
@@ -205,7 +205,7 @@ const LoginForm = ({
             className={`w-1/2 text-center flex flex-row justify-center pl-9 `}
             href="/"
           >
-            <img width={20} height={2} src="/photos/back.png" />
+            <img width={20} height={2} src="/icons/back.png" />
           </Link>
         </div>
 

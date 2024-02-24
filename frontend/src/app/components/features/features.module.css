@@ -1,0 +1,7 @@
+.cardWrapper {
+  display: flex !important;
+}
+.wrapper {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}

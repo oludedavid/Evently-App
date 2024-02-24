@@ -3,6 +3,8 @@ import Link from "next/link";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import HeroSection from "./components/hero-component/hero";
+import FeaturesSection from "./components/features/features";
 
 type User = {
   id: number;
@@ -34,30 +36,16 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Welcome to this Nextjs Application</h1>
       {/* will check if user is logged in or not */}
       {user != null ? (
         <div>
-          <h2>Logged in</h2>
-          <h3>ID: {user.id}</h3>
-          <h3>Email: {user.email}</h3>
-
+          <h1>Welcome back to Evently {user.email}</h1>
           <button onClick={logoutUser}>Logout</button>
         </div>
       ) : (
-        <div>
-          <p>You are not logged in</p>
-          <div>
-            <Link href="/login">
-              <button>Login</button>
-            </Link>
-            <Link href="/register">
-              <button>Register</button>
-            </Link>
-          </div>
-          <Link href="/">
-            <button>Back</button>
-          </Link>
+        <div className="w-screen h-screen p-4">
+          <HeroSection />
+          <FeaturesSection />
         </div>
       )}
     </div>
