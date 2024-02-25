@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import HeroSection from "./components/hero-component/hero";
 import FeaturesSection from "./components/features/features";
+import Benefits from "./components/benefits/benefits";
+import CallToAction from "./components/call-to-action/callToAction";
 
 type User = {
   id: number;
@@ -46,6 +48,8 @@ export default function Home() {
         <div className="w-screen h-screen p-4">
           <HeroSection />
           <FeaturesSection />
+          <Benefits />
+          <CallToAction />
         </div>
       )}
     </div>

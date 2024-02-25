@@ -4,7 +4,7 @@ import featuresStyles from "./features.module.css";
 export default function FeaturesSection() {
   return (
     <div
-      className={`flex flex-col items-center w-full p-10 gap-4 ${featuresStyles.wrapper}`}
+      className={`flex flex-col items-center w-full p-4 gap-4 ${featuresStyles.wrapper}`}
     >
       <h1 className="text-4xl font-bold">Features</h1>
       <div className="flex flex-col md:flex-row items-center justify-center w-full p-8 gap-10">
