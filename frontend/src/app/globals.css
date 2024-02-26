@@ -5,3 +5,7 @@
 form {
   font-family: "Montserrat Alternates", sans-serif;
 }
+
+body {
+  overflow-x: hidden;
+}

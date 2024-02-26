@@ -7,6 +7,9 @@ import HeroSection from "./components/hero-component/hero";
 import FeaturesSection from "./components/features/features";
 import Benefits from "./components/benefits/benefits";
 import CallToAction from "./components/call-to-action/callToAction";
+import NavBar from "./components/navMenu/navigationMenu";
+import Footer from "./components/footer/footer";
+import Layout from "./components/layout/layout";
 
 type User = {
   id: number;
@@ -46,10 +49,14 @@ export default function Home() {
         </div>
       ) : (
         <div className="w-screen h-screen p-4">
-          <HeroSection />
-          <FeaturesSection />
-          <Benefits />
-          <CallToAction />
+          <Layout>
+            <div className="md:pt-28">
+              <HeroSection />
+              <FeaturesSection />
+              <Benefits />
+              <CallToAction />
+            </div>
+          </Layout>
         </div>
       )}
     </div>

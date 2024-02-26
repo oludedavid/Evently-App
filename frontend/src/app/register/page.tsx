@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import registerStyles from "./register.module.css";
+import Layout from "../components/layout/layout";
 
 type FormData = {
   userName?: string;
@@ -53,28 +54,30 @@ export default function RegisterPage() {
     registerUsers();
   };
   return (
-    <div
-      className={`flex bg-red-100 flex-col items-center md:flex-row w-screen h-screen p-4 gap-4 md:gap-1`}
-    >
-      <figure
-        className={`w-32 h-32 md:w-10/12 md:h-3/4 md:bg-red-200 md:rounded-lg flex flex-col items-center md:p-10 mt-2 md:ml-4 md:shadow-sm`}
-      >
-        <img
-          className={`${registerStyles.image} w-full h-full md:w-full md:h-full`}
-          src="/photos/reading.png"
-          alt="Ice Cream"
-        />
-      </figure>
+    <Layout>
       <div
-        className={`w-full flex flex-col items-center justify-normal md:justify-center py-10 gap-0 md:gap-20 px-5`}
+        className={`flex bg-red-100 flex-col items-center md:flex-row w-screen h-screen p-4 gap-4 md:gap-1`}
       >
-        <FormComponent
-          type="register"
-          values={formValues}
-          onChangeHandler={handleRegisterChange}
-          onClick={handleRegisterClickEvent}
-        />
+        <figure
+          className={`w-32 h-32 md:w-10/12 md:h-3/4 md:bg-red-200 md:rounded-lg flex flex-col items-center md:p-10 mt-2 md:ml-4 md:shadow-sm`}
+        >
+          <img
+            className={`${registerStyles.image} w-full h-full md:w-full md:h-full`}
+            src="/photos/reading.png"
+            alt="Ice Cream"
+          />
+        </figure>
+        <div
+          className={`w-full flex flex-col items-center justify-normal md:justify-center py-10 gap-0 md:gap-20 px-5`}
+        >
+          <FormComponent
+            type="register"
+            values={formValues}
+            onChangeHandler={handleRegisterChange}
+            onClick={handleRegisterClickEvent}
+          />
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 }
